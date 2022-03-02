@@ -1,0 +1,28 @@
+﻿@page "/"
+
+@inject Blazored.LocalStorage.ILocalStorageService localStorage
+
+
+<h1>Hello, Welcome to Wardrobe! @counter</h1>
+<section class="vh-100">
+    <div class="container-fluid h-custom">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-md-6">
+                <FormComponent></FormComponent>
+            </div>
+            <div class="col-md-6">
+                <RegisterFormComponent></RegisterFormComponent>
+            </div>
+        </div>
+    </div>
+</section>
+@code{
+    private int counter=0;
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {    
+        counter = await localStorage.GetItemAsync<int>("name");
+    }
+    
+}
+            

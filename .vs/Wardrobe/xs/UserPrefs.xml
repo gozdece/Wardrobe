@@ -1,0 +1,63 @@
+﻿<Properties StartupConfiguration="BlazorApi">
+  <MonoDevelop.Ide.ItemProperties.BlazorUi PreferredExecutionTarget="/Volumes/Graphic_1 - Data/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Blazor/Pages/Index.razor">
+    <Files>
+      <File FileName="BlazorUi/Pages/CategoryProductList.razor" Line="43" Column="3" />
+      <File FileName="Blazor/Pages/ProductList.razor" Line="3" Column="11" />
+      <File FileName="Blazor/Pages/Index.razor" Line="19" Column="34" />
+      <File FileName="Blazor/Pages/Product.razor" Line="1" Column="26" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Wardrobe" expanded="True">
+            <Node name="Api" expanded="True" />
+            <Node name="Blazor" expanded="True">
+              <Node name="Pages" expanded="True">
+                <Node name="Index.razor" selected="True" />
+              </Node>
+              <Node name="Properties" expanded="True" />
+              <Node name="Shared" expanded="True" />
+              <Node name="wwwroot" expanded="True">
+                <Node name="css" expanded="True" />
+              </Node>
+            </Node>
+            <Node name="BlazorUi" expanded="True">
+              <Node name="Pages" expanded="True" />
+              <Node name="Shared" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.Api PreferredExecutionTarget="/Applications/Safari.app" />
+  <MonoDevelop.Ide.ItemProperties.Blazor PreferredExecutionTarget="/Applications/Safari.app" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <Debugger.DebugSourceFolders />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/gozdecengiz/Downloads/WardrobeProject-main/BlazorUi/Shared/EditProduct.razor" relfile="BlazorUi/Shared/EditProduct.razor" line="37" column="1" />
+      <Breakpoint file="/Users/gozdecengiz/Downloads/WardrobeProject-main/Api/Controllers/ColorController.cs" relfile="Api/Controllers/ColorController.cs" line="27" column="1" />
+      <Breakpoint file="/Users/gozdecengiz/Downloads/WardrobeProject-main/Api/Controllers/OfferController.cs" relfile="Api/Controllers/OfferController.cs" line="38" column="1" />
+      <Breakpoint file="/Users/gozdecengiz/Downloads/WardrobeProject-main/BlazorUi/Shared/CategoryCreate.razor" relfile="BlazorUi/Shared/CategoryCreate.razor" line="47" column="1" />
+      <Breakpoint file="/Users/gozdecengiz/Downloads/WardrobeProject-main/Service/Services/JwtAuthentication.cs" relfile="Service/Services/JwtAuthentication.cs" line="30" column="1" />
+      <Breakpoint file="/Users/gozdecengiz/Downloads/WardrobeProject-main/BlazorUi/Pages/CreateProduct.razor" relfile="BlazorUi/Pages/CreateProduct.razor" line="117" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations>
+    <MultiItemSolutionRunConfiguration Id="aa" Name="aa">
+      <Items>
+        <StartupItem ItemId="{537FD45C-C9D6-4943-A97C-8154FB7A0AAD}" ItemName="Api" ConfigurationId="Default" />
+        <StartupItem ItemId="{2506E633-64F5-4E5B-8AB9-A2A93C0ED6E5}" ItemName="BlazorUi" ConfigurationId="Default" />
+      </Items>
+    </MultiItemSolutionRunConfiguration>
+    <MultiItemSolutionRunConfiguration Id="BlazorApi" Name="BlazorApi">
+      <Items>
+        <StartupItem ItemId="{537FD45C-C9D6-4943-A97C-8154FB7A0AAD}" ItemName="Api" ConfigurationId="Default" />
+        <StartupItem ItemId="{09226CB0-D0BB-4DBD-BC1E-9AB98B5325AB}" ItemName="Blazor" ConfigurationId="Default" />
+      </Items>
+    </MultiItemSolutionRunConfiguration>
+  </MultiItemStartupConfigurations>
+</Properties>

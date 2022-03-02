@@ -1,0 +1,50 @@
+﻿@page "/categoryList"
+@using Core.Dtos.CategoryDto
+@using Microsoft.AspNetCore.Components.Server.ProtectedBrowserStorage
+
+<HeaderLayout></HeaderLayout>
+<h3>Category List</h3>
+
+
+    
+
+
+<CategoryCreate></CategoryCreate>
+
+@code {
+    public List<CategoryDto> categoryList;
+
+    protected override async Task OnInitializedAsync()
+    {
+
+        var url = "https://localhost:5001/api/Category/GetAll";
+
+        using (var httpClient = new HttpClient())
+        {
+            var response = await httpClient.GetAsync(url);
+
+            if (response.StatusCode == System.Net.HttpStatusCode.OK)
+            {
+                var responseString = await response.Content.ReadAsStringAsync();
+                categoryList = System.Text.Json.JsonSerializer.Deserialize<List<CategoryDto>>(responseString,
+                    new System.Text.Json.JsonSerializerOptions() { PropertyNameCaseInsensitive = true });
+            }
+        }
+
+
+    }
+
+    void ShowProduct(int categoryId)
+    {
+
+    }
+    void DeleteCategory(int categoryId)
+    {
+
+    }
+    void UpdateCategory(int cateogryId)
+    {
+
+    }
+
+}

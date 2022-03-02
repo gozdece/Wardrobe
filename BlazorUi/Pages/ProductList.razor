@@ -1,0 +1,68 @@
+﻿@page "/productlist"
+
+
+@inject ProtectedLocalStorage Storage
+@inject IHttpClientFactory ClientFactory
+@inject NavigationManager navigation
+<h3>ProductList</h3>
+@if (productList == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+     <button type="submit" class="btn btn-success" value="Urunlere git" @onclick="(()=> CreateProduct())">Urun Olustur</button>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Sold Status</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var product in productList)
+            {
+                <tr>
+                    <td>@product.Name</td>
+                    <td>@product.Price</td>
+                    <td>@product.IsSold</td>
+                    <td><button class="btn btn-primary" @onclick="(()=>ShowProduct(product.Id))">Detay Gor</button></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+    public List<ProductDto> productList;
+
+    protected override async Task OnInitializedAsync()
+    {
+        var client = ClientFactory.CreateClient();
+        var request = new HttpRequestMessage(HttpMethod.Get, "https://localhost:44320/api/product/getall");
+        var token = await Storage.GetAsync<string>("token");
+
+        request.Headers.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", token.Value);
+
+        var response = await client.SendAsync(request);
+
+        if (response.IsSuccessStatusCode)
+        {
+            var json = await response.Content.ReadAsStringAsync();
+            productList = System.Text.Json.JsonSerializer.Deserialize<List<ProductDto>>(json);           
+        }
+
+    }
+
+    void ShowProduct(int id)
+    {
+        navigation.NavigateTo($"product/{id}");
+    }
+
+    void CreateProduct()
+    {
+        navigation.NavigateTo("createProduct");
+    }
+}
